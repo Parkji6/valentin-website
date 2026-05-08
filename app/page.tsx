@@ -25,56 +25,20 @@ interface BlogPost {
 }
 
 function formatDate(dateString: string): string {
-  return new Date(dateString).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  return new Date(dateString)
+    .toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+    .toUpperCase();
 }
 
-function ArticleCard({ post, featured = false }: { post: BlogPost; featured?: boolean }) {
-  if (featured) {
-    return (
-      <Link href={`/blog/${post.slug}`} className="group block">
-        <article className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div className="aspect-[16/9] overflow-hidden rounded-2xl bg-gray-100">
-            {post.coverImage && (
-              <img
-                src={post.coverImage}
-                alt={post.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            )}
-          </div>
-          <div>
-            {post.category && (
-              <span className="inline-block text-xs font-bold tracking-widest uppercase text-blue-600 mb-4">
-                {post.category}
-              </span>
-            )}
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-600 transition-colors">
-              {post.title}
-            </h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">{post.excerpt}</p>
-            <div className="flex items-center gap-4 text-sm text-gray-500">
-              <span>{formatDate(post.publishDate)}</span>
-              {post.readTime && (
-                <>
-                  <span>•</span>
-                  <span>{post.readTime}</span>
-                </>
-              )}
-            </div>
-          </div>
-        </article>
-      </Link>
-    );
-  }
-
+function ArticleCard({ post }: { post: BlogPost }) {
   return (
     <Link href={`/blog/${post.slug}`} className="group block">
       <article>
-        <div className="aspect-[16/9] overflow-hidden rounded-xl bg-gray-100 mb-5">
+        <div className="aspect-[16/9] overflow-hidden rounded-md bg-gray-900 mb-5 relative">
           {post.coverImage && (
             <img
               src={post.coverImage}
@@ -82,25 +46,21 @@ function ArticleCard({ post, featured = false }: { post: BlogPost; featured?: bo
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           )}
+          {/* Title overlay on image (Lambda-style) */}
+          <div className="absolute bottom-4 left-4 right-12 max-w-[80%]">
+            <span className="inline bg-yellow-300 text-gray-900 text-sm md:text-base font-bold px-2 py-1 leading-tight box-decoration-clone">
+              {post.title}
+            </span>
+          </div>
         </div>
-        {post.category && (
-          <span className="inline-block text-xs font-bold tracking-widest uppercase text-blue-600 mb-3">
-            {post.category}
-          </span>
-        )}
-        <h3 className="text-xl font-bold text-gray-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">
+        <p className="text-xs font-mono tracking-wider text-gray-500 mb-3 uppercase">
+          Published on {formatDate(post.publishDate)} by{' '}
+          <span className="text-blue-600 underline">Valentin</span>
+        </p>
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors">
           {post.title}
         </h3>
-        <p className="text-gray-600 mb-4 leading-relaxed line-clamp-2">{post.excerpt}</p>
-        <div className="flex items-center gap-3 text-sm text-gray-500">
-          <span>{formatDate(post.publishDate)}</span>
-          {post.readTime && (
-            <>
-              <span>•</span>
-              <span>{post.readTime}</span>
-            </>
-          )}
-        </div>
+        <p className="text-gray-600 leading-relaxed line-clamp-3">{post.excerpt}</p>
       </article>
     </Link>
   );
@@ -109,7 +69,7 @@ function ArticleCard({ post, featured = false }: { post: BlogPost; featured?: bo
 function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group">
-      <div className="aspect-[16/9] overflow-hidden rounded-xl bg-gray-100 mb-5">
+      <div className="aspect-[16/9] overflow-hidden rounded-md bg-gray-900 mb-5 relative">
         {project.image && (
           <img
             src={project.image}
@@ -117,38 +77,28 @@ function ProjectCard({ project }: { project: Project }) {
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         )}
-      </div>
-      <div className="flex items-center gap-2 mb-3">
-        <span
-          className={`inline-block text-xs font-bold tracking-widest uppercase ${
-            project.status === 'Shipped'
-              ? 'text-green-600'
-              : project.status === 'In progress'
-              ? 'text-blue-600'
-              : 'text-gray-500'
-          }`}
-        >
-          {project.status}
-        </span>
-      </div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3 leading-snug">{project.title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{project.problem}</p>
-      <div className="flex flex-wrap gap-2 mb-4">
-        {project.tech.slice(0, 4).map((t) => (
-          <span key={t} className="text-xs text-gray-600 bg-gray-100 px-2.5 py-1 rounded-md font-medium">
-            {t}
+        <div className="absolute bottom-4 left-4 right-12 max-w-[80%]">
+          <span className="inline bg-yellow-300 text-gray-900 text-sm md:text-base font-bold px-2 py-1 leading-tight box-decoration-clone">
+            {project.title}
           </span>
-        ))}
+        </div>
       </div>
+      <p className="text-xs font-mono tracking-wider text-gray-500 mb-3 uppercase">
+        {project.status} · {project.tech.slice(0, 2).join(' · ')}
+      </p>
+      <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight">
+        {project.title}
+      </h3>
+      <p className="text-gray-600 leading-relaxed mb-4 line-clamp-2">{project.problem}</p>
       <div className="flex gap-4 text-sm font-medium">
         {project.liveUrl && (
           <a
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-700"
+            className="text-blue-600 hover:text-blue-700 underline"
           >
-            Visit →
+            Visit
           </a>
         )}
         {project.githubUrl && (
@@ -156,9 +106,9 @@ function ProjectCard({ project }: { project: Project }) {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-700"
+            className="text-blue-600 hover:text-blue-700 underline"
           >
-            Code →
+            Code
           </a>
         )}
       </div>
@@ -176,7 +126,7 @@ function Pillar({
   description: string;
 }) {
   return (
-    <div className="border-t border-gray-900 pt-6">
+    <div className="border-t-2 border-gray-900 pt-6">
       <div className="text-sm font-mono text-gray-400 mb-4">{number}</div>
       <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 leading-relaxed">{description}</p>
@@ -187,29 +137,28 @@ function Pillar({
 export default function Home() {
   const projects = getProjects();
   const blogPosts = getBlogPosts();
-  const [featuredPost, ...otherPosts] = blogPosts;
 
   return (
     <div className="bg-white">
       {/* Navigation */}
-      <nav className="border-b border-gray-100 sticky top-0 bg-white/80 backdrop-blur-md z-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex justify-between items-center">
-          <Link href="/" className="text-lg font-bold text-gray-900 tracking-tight">
+      <nav className="absolute top-0 left-0 right-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex justify-between items-center">
+          <Link href="/" className="text-lg font-bold text-white tracking-tight">
             Valentin Houssais
           </Link>
-          <div className="flex gap-8 text-sm font-medium">
-            <a href="#why" className="text-gray-600 hover:text-gray-900 transition-colors">
+          <div className="hidden md:flex gap-8 text-sm font-medium">
+            <a href="#why" className="text-gray-300 hover:text-white transition-colors">
               Why
             </a>
-            <a href="#articles" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <a href="#articles" className="text-gray-300 hover:text-white transition-colors">
               Articles
             </a>
-            <a href="#projects" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <a href="#projects" className="text-gray-300 hover:text-white transition-colors">
               Projects
             </a>
             <a
               href="mailto:valentin.houssais@gmail.com"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-gray-300 hover:text-white transition-colors"
             >
               Contact
             </a>
@@ -217,39 +166,58 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <header className="border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 md:py-40">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-8">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-xs font-semibold text-blue-700 tracking-wide">
-                Currently shipping AI products
-              </span>
-            </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-8">
-              Building AI<br />
-              products in<br />
-              <span className="text-blue-600">public.</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl mb-10">
-              I'm Valentin. I document the messy, honest reality of building AI products — the breakthroughs, the dead ends, and everything in between.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#articles"
-                className="inline-flex items-center justify-center px-7 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors"
-              >
-                Read latest articles →
-              </a>
-              <a
-                href="#why"
-                className="inline-flex items-center justify-center px-7 py-4 border border-gray-300 text-gray-900 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-              >
-                Why follow along
-              </a>
+      {/* Hero Section — full-bleed image with text overlay */}
+      <header className="relative h-screen min-h-[700px] max-h-[900px] w-full overflow-hidden">
+        {/* Background image */}
+        <img
+          src="/hero.svg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+        />
+        {/* Dark overlay for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+
+        {/* Content */}
+        <div className="relative h-full flex items-center">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full">
+            <div className="max-w-4xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                <span className="text-xs font-semibold text-white tracking-wide">
+                  Currently shipping AI products
+                </span>
+              </div>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight mb-8">
+                Building AI<br />
+                products in<br />
+                <span className="text-blue-400">public.</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed max-w-2xl mb-10">
+                I'm Valentin. I document the messy, honest reality of building AI products — the breakthroughs, the dead ends, and everything in between.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#articles"
+                  className="inline-flex items-center justify-center px-7 py-4 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read latest articles →
+                </a>
+                <a
+                  href="#why"
+                  className="inline-flex items-center justify-center px-7 py-4 border border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm"
+                >
+                  Why follow along
+                </a>
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Scroll hint */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 text-xs tracking-widest uppercase font-mono">
+          Scroll
         </div>
       </header>
 
@@ -257,7 +225,7 @@ export default function Home() {
       <section id="why" className="border-b border-gray-100 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 md:py-32">
           <div className="max-w-3xl mb-16">
-            <span className="inline-block text-sm font-bold tracking-widest uppercase text-blue-600 mb-4">
+            <span className="inline-block text-xs font-bold tracking-widest uppercase text-blue-600 mb-4">
               Why follow this journey
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
@@ -288,34 +256,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Articles Section */}
+      {/* Articles Section — uniform grid */}
       <section id="articles" className="border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 md:py-32">
-          <div className="flex items-end justify-between mb-16">
-            <div>
-              <span className="inline-block text-sm font-bold tracking-widest uppercase text-blue-600 mb-4">
-                The blog
-              </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
-                Latest articles
-              </h2>
-            </div>
+          <div className="mb-16">
+            <span className="inline-block text-xs font-bold tracking-widest uppercase text-blue-600 mb-4">
+              The blog
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
+              Latest articles
+            </h2>
           </div>
 
-          {featuredPost ? (
-            <>
-              <div className="mb-20">
-                <ArticleCard post={featuredPost} featured />
-              </div>
-
-              {otherPosts.length > 0 && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 pt-16 border-t border-gray-100">
-                  {otherPosts.map((post) => (
-                    <ArticleCard key={post.slug} post={post} />
-                  ))}
-                </div>
-              )}
-            </>
+          {blogPosts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+              {blogPosts.map((post) => (
+                <ArticleCard key={post.slug} post={post} />
+              ))}
+            </div>
           ) : (
             <p className="text-gray-600">No articles yet.</p>
           )}
@@ -326,7 +284,7 @@ export default function Home() {
       <section id="projects" className="border-b border-gray-100 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 md:py-32">
           <div className="mb-16">
-            <span className="inline-block text-sm font-bold tracking-widest uppercase text-blue-600 mb-4">
+            <span className="inline-block text-xs font-bold tracking-widest uppercase text-blue-600 mb-4">
               What I'm building
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
@@ -347,7 +305,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-b border-gray-100 bg-gray-900 text-white">
+      <section className="bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 md:py-32">
           <div className="max-w-3xl">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6">

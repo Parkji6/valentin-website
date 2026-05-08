@@ -1,0 +1,128 @@
+<svg width="1920" height="900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020617;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#0f172a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="orbGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="900" fill="url(#heroGrad)"/>
+
+  <!-- Glow orbs -->
+  <circle cx="1500" cy="200" r="350" fill="url(#orbGlow)"/>
+  <circle cx="200" cy="700" r="300" fill="url(#orbGlow2)"/>
+
+  <!-- Perspective grid (floor) -->
+  <g opacity="0.15" stroke="#60a5fa" stroke-width="1" fill="none">
+    <line x1="-200" y1="900" x2="960" y2="500"/>
+    <line x1="200" y1="900" x2="960" y2="500"/>
+    <line x1="600" y1="900" x2="960" y2="500"/>
+    <line x1="960" y1="900" x2="960" y2="500"/>
+    <line x1="1320" y1="900" x2="960" y2="500"/>
+    <line x1="1720" y1="900" x2="960" y2="500"/>
+    <line x1="2120" y1="900" x2="960" y2="500"/>
+
+    <ellipse cx="960" cy="540" rx="180" ry="20"/>
+    <ellipse cx="960" cy="600" rx="380" ry="40"/>
+    <ellipse cx="960" cy="680" rx="650" ry="65"/>
+    <ellipse cx="960" cy="780" rx="980" ry="100"/>
+    <ellipse cx="960" cy="900" rx="1400" ry="150"/>
+  </g>
+
+  <!-- Neural network constellation (right side) -->
+  <g transform="translate(1200, 150)">
+    <g stroke="#3b82f6" stroke-width="1" opacity="0.4">
+      <line x1="60" y1="60" x2="200" y2="20"/>
+      <line x1="60" y1="60" x2="200" y2="120"/>
+      <line x1="60" y1="60" x2="200" y2="220"/>
+      <line x1="60" y1="180" x2="200" y2="120"/>
+      <line x1="60" y1="180" x2="200" y2="220"/>
+      <line x1="60" y1="180" x2="200" y2="320"/>
+      <line x1="60" y1="300" x2="200" y2="220"/>
+      <line x1="60" y1="300" x2="200" y2="320"/>
+      <line x1="60" y1="300" x2="200" y2="420"/>
+      <line x1="60" y1="420" x2="200" y2="320"/>
+      <line x1="60" y1="420" x2="200" y2="420"/>
+
+      <line x1="220" y1="20" x2="380" y2="120"/>
+      <line x1="220" y1="120" x2="380" y2="120"/>
+      <line x1="220" y1="120" x2="380" y2="220"/>
+      <line x1="220" y1="220" x2="380" y2="120"/>
+      <line x1="220" y1="220" x2="380" y2="220"/>
+      <line x1="220" y1="220" x2="380" y2="320"/>
+      <line x1="220" y1="320" x2="380" y2="220"/>
+      <line x1="220" y1="320" x2="380" y2="320"/>
+      <line x1="220" y1="420" x2="380" y2="320"/>
+
+      <line x1="400" y1="120" x2="540" y2="220"/>
+      <line x1="400" y1="220" x2="540" y2="220"/>
+      <line x1="400" y1="320" x2="540" y2="220"/>
+    </g>
+
+    <g fill="#60a5fa">
+      <circle cx="60" cy="60" r="6"/>
+      <circle cx="60" cy="180" r="6"/>
+      <circle cx="60" cy="300" r="6"/>
+      <circle cx="60" cy="420" r="6"/>
+    </g>
+    <g fill="#a78bfa">
+      <circle cx="200" cy="20" r="6"/>
+      <circle cx="200" cy="120" r="6"/>
+      <circle cx="200" cy="220" r="6"/>
+      <circle cx="200" cy="320" r="6"/>
+      <circle cx="200" cy="420" r="6"/>
+    </g>
+    <g fill="#c084fc">
+      <circle cx="380" cy="120" r="6"/>
+      <circle cx="380" cy="220" r="6"/>
+      <circle cx="380" cy="320" r="6"/>
+    </g>
+    <g fill="#f0abfc">
+      <circle cx="540" cy="220" r="10"/>
+    </g>
+  </g>
+
+  <!-- Floating particles -->
+  <g fill="#94a3b8" opacity="0.5">
+    <circle cx="120" cy="120" r="2"/>
+    <circle cx="280" cy="250" r="1.5"/>
+    <circle cx="450" cy="180" r="2"/>
+    <circle cx="620" cy="320" r="1.5"/>
+    <circle cx="780" cy="200" r="2"/>
+    <circle cx="900" cy="380" r="1.5"/>
+    <circle cx="1050" cy="250" r="2"/>
+    <circle cx="1180" cy="450" r="1.5"/>
+    <circle cx="1380" cy="600" r="2"/>
+    <circle cx="1620" cy="500" r="1.5"/>
+    <circle cx="1780" cy="380" r="2"/>
+    <circle cx="100" cy="450" r="1.5"/>
+    <circle cx="350" cy="550" r="2"/>
+    <circle cx="700" cy="650" r="1.5"/>
+  </g>
+
+  <!-- Subtle code/text particles in left area -->
+  <g font-family="Monaco, monospace" font-size="11" fill="#475569" opacity="0.3">
+    <text x="80" y="200">{ ai: "build" }</text>
+    <text x="100" y="350">// shipping</text>
+    <text x="60" y="500">model.train()</text>
+    <text x="120" y="650">→ in public</text>
+  </g>
+
+  <!-- Bottom gradient overlay for text legibility -->
+  <rect x="0" y="0" width="1920" height="900" fill="url(#heroFade)" opacity="0"/>
+  <defs>
+    <linearGradient id="heroFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#020617;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#020617;stop-opacity:0.7"/>
+    </linearGradient>
+  </defs>
+</svg>
