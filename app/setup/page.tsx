@@ -259,7 +259,7 @@ export default function SetupPage() {
             I'm happy to help. Send me a message and I'll do my best to answer.
           </p>
           <a
-            href="mailto:valentin.houssais@gmail.com"
+            href="/contact"
             className="inline-block px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold no-underline hover:bg-blue-600 transition-colors"
           >
             Get in touch

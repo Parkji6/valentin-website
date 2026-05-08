@@ -164,8 +164,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:valentin.houssais@gmail.com" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">
-                      Email
+                    <a href="/contact" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">
+                      Contact
                     </a>
                   </li>
                 </ul>
