@@ -38,10 +38,10 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Valentin Houssais | Shipping AI Products</title>
+        <title>Practical AI 101 | Shipping AI Products in Public</title>
         <meta
           name="description"
-          content="Building and shipping AI products. Learning in public."
+          content="Building practical AI tools from scratch — no hype, no shortcuts. Documenting everything honestly."
         />
       </head>
       <body className={isDark ? 'dark' : ''}>
@@ -49,7 +49,7 @@ export default function RootLayout({
           <nav className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
             <div className="font-bold text-xl">
               <a href="/" className="no-underline text-gray-900 dark:text-gray-50 hover:text-blue-500">
-                Valentin Houssais
+                Practical AI 101
               </a>
             </div>
             <div className="flex items-center gap-6">
@@ -62,7 +62,7 @@ export default function RootLayout({
               <a href="/#projects" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
                 Projects
               </a>
-              <a href="/blog" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
+              <a href="/#blog" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
                 Blog
               </a>
               <a href="/#upcoming" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
@@ -101,7 +101,7 @@ export default function RootLayout({
                     </a>
                   </li>
                   <li>
-                    <a href="/blog" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500">
+                    <a href="/#blog" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500">
                       Blog
                     </a>
                   </li>
@@ -152,7 +152,7 @@ export default function RootLayout({
             </div>
             <div className="border-t border-gray-200 dark:border-gray-800 pt-8">
               <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
-                © 2025 Valentin Houssais. Built with Next.js & deployed on Vercel.
+                © 2025 Practical AI 101 — by <a href="https://www.linkedin.com/in/valentin-houssais/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 no-underline">Valentin Houssais</a>. Built with Next.js & deployed on Vercel.
               </p>
             </div>
           </div>

@@ -47,8 +47,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-4 py-20">
-        <div className="mb-12">
-          <p className="text-blue-500 font-semibold mb-2">Valentin Houssais</p>
+        <div className="mb-10">
+          <p className="text-blue-500 font-semibold mb-2">Practical AI 101</p>
           <h1 className="text-5xl font-bold mb-4 text-gray-900 dark:text-gray-50">
             Shipping AI products. Learning in public.
           </h1>
@@ -56,6 +56,67 @@ export default function Home() {
             Building practical AI tools for myself — no hype, no shortcuts. Just figuring out what actually works and sharing it honestly.
           </p>
         </div>
+
+        {/* Side by side: image left, video right */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          {/* Image */}
+          <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800">
+            <img
+              src="/images/hero.png"
+              alt="The beginning of the AI journey — building instead of scrolling"
+              className="w-full h-64 md:h-80 object-cover"
+            />
+          </div>
+
+          {/* Video */}
+          <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
+            <video
+              src="/images/hero-video.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-64 md:h-80 object-cover"
+            >
+              <img
+                src="/images/hero.png"
+                alt="Fallback: the beginning of the AI journey"
+                className="w-full h-64 md:h-80 object-cover"
+              />
+            </video>
+          </div>
+        </div>
+
+        {/* Collapsible prompt caption */}
+        <details className="group border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden">
+          <summary className="flex items-center justify-between px-4 py-3 cursor-pointer text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 list-none">
+            <span>
+              <span className="font-medium text-gray-700 dark:text-gray-300">Generated with Gemini</span>
+              {' '}— click to see the prompts used
+            </span>
+            <span className="transition-transform group-open:rotate-180">↓</span>
+          </summary>
+          <div className="px-4 pb-4 border-t border-gray-200 dark:border-gray-800">
+            <div className="mt-4 space-y-4">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">
+                  Image prompt
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed bg-gray-50 dark:bg-gray-900 rounded p-3 font-mono">
+                  A wide cinematic illustration of a person at a desk late at night, excited and focused, building something on a PC with two monitors. The right screen shows code and a Polish learning app interface. On the wall behind them, a roadmap with sticky notes: "Polish App ✓", "Website ✓", "Personal Assistant", "Budget Manager"... On a second screen to the left, a LinkedIn feed is visible filled with generic AI hype posts — "10 prompts that will change your life", "AI will replace you if you don't follow these steps", notification bubbles everywhere. The person is clearly ignoring it, turned toward their own work. Warm desk lamp light on the right, cold blue LinkedIn glow on the left. The mood is: I stopped scrolling, I started building. Detailed, editorial illustration style, slightly cinematic.
+                </p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">
+                  Video prompt
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed bg-gray-50 dark:bg-gray-900 rounded p-3 font-mono">
+                  Cinematic short video, 5-10 seconds, no dialogue. A person sits at a desk late at night with two monitors. Camera slowly pushes in from behind. Left monitor: a LinkedIn feed scrolling automatically, filled with AI hype posts — "10 prompts that will change your life", notification bubbles piling up, cold blue glow. Right monitor: code editor open, a Polish learning app interface visible, warm desk lamp light. The person's hands move to the keyboard — they start typing on the right screen, completely ignoring the left. On the wall, sticky notes: "Polish App ✓", "Website ✓", "Personal Assistant"... Camera ends on a close-up of the right screen as code appears. Mood: I stopped scrolling, I started building. Cinematic color grading, editorial illustration style, slightly animated.
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
       </section>
 
       {/* About Section */}
@@ -191,12 +252,7 @@ export default function Home() {
 
       {/* Blog Section */}
       <section id="blog" className="max-w-4xl mx-auto px-4 py-16 border-t border-gray-200 dark:border-gray-800">
-        <div className="flex items-baseline justify-between mb-6">
-          <h2 className="text-3xl font-bold">Latest Articles</h2>
-          <a href="/blog" className="text-blue-500 dark:text-blue-400 text-sm no-underline hover:underline">
-            View all →
-          </a>
-        </div>
+        <h2 className="text-3xl font-bold mb-6">Latest Articles</h2>
         {posts.length === 0 ? (
           <p className="text-gray-600 dark:text-gray-400">No blog posts yet. Check back soon!</p>
         ) : (

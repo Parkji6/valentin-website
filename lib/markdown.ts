@@ -3,6 +3,8 @@ import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 
+marked.setOptions({ async: false });
+
 const postsDirectory = path.join(process.cwd(), 'content', 'blog');
 const projectsDirectory = path.join(process.cwd(), 'content', 'projects');
 
