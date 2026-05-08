@@ -51,7 +51,7 @@ export function getAllBlogPosts(): BlogPost[] {
         excerpt: data.excerpt || '',
         image: data.image,
         imageAlt: data.imageAlt,
-        content: marked(content) as string,
+        content: marked(content),
       };
     });
 
@@ -75,7 +75,7 @@ export function getBlogPost(slug: string): BlogPost | null {
     excerpt: data.excerpt || '',
     image: data.image,
     imageAlt: data.imageAlt,
-    content: marked(content) as string,
+    content: marked(content),
   };
 }
 

@@ -47,7 +47,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-4 py-20">
-        <div className="mb-8">
+        <div className="mb-12">
           <p className="text-blue-500 font-semibold mb-2">Valentin Houssais</p>
           <h1 className="text-5xl font-bold mb-4 text-gray-900 dark:text-gray-50">
             Shipping AI products. Learning in public.
@@ -55,13 +55,6 @@ export default function Home() {
           <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
             Building practical AI tools for myself — no hype, no shortcuts. Just figuring out what actually works and sharing it honestly.
           </p>
-        </div>
-        <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800">
-          <img
-            src="/images/hero.png"
-            alt="Valentin's AI journey — building practical tools, no hype"
-            className="w-full h-auto object-cover"
-          />
         </div>
       </section>
 
@@ -81,6 +74,43 @@ export default function Home() {
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-semibold">
             No hype. Just building.
           </p>
+        </div>
+      </section>
+
+      {/* Stack Section */}
+      <section id="stack" className="max-w-4xl mx-auto px-4 py-16 border-t border-gray-200 dark:border-gray-800">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className="text-3xl font-bold mb-2">My stack</h2>
+            <p className="text-gray-600 dark:text-gray-400">Everything I use to build and ship. All free to start.</p>
+          </div>
+          <a href="/setup" className="text-blue-500 dark:text-blue-400 text-sm no-underline hover:underline whitespace-nowrap">
+            Full setup guide →
+          </a>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {[
+            { name: 'Claude', url: 'https://claude.ai', icon: '🤖', reason: 'My co-builder. Planning, coding, debugging — I use it for everything.' },
+            { name: 'VS Code', url: 'https://code.visualstudio.com', icon: '💻', reason: 'Where I write and edit code. Simple, fast, free.' },
+            { name: 'GitHub', url: 'https://github.com/Parkji6', icon: '🐙', reason: 'All my code lives here. Every project is open source.' },
+            { name: 'Vercel', url: 'https://vercel.com', icon: '▲', reason: 'One click to deploy. Free for personal projects.' },
+            { name: 'Next.js', url: 'https://nextjs.org', icon: '⚡', reason: 'React framework I use for every web project.' },
+            { name: 'Tailwind CSS', url: 'https://tailwindcss.com', icon: '🎨', reason: 'Makes styling fast without writing custom CSS.' },
+          ].map((tool) => (
+            <a
+              key={tool.name}
+              href={tool.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-4 border border-gray-200 dark:border-gray-800 rounded-lg p-4 no-underline hover:border-blue-500 dark:hover:border-blue-400 transition-colors group"
+            >
+              <span className="text-2xl">{tool.icon}</span>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-gray-50 group-hover:text-blue-500 transition-colors">{tool.name}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{tool.reason}</p>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
 
@@ -161,12 +191,7 @@ export default function Home() {
 
       {/* Blog Section */}
       <section id="blog" className="max-w-4xl mx-auto px-4 py-16 border-t border-gray-200 dark:border-gray-800">
-        <div className="flex items-baseline justify-between mb-6">
-          <h2 className="text-3xl font-bold">Latest Articles</h2>
-          <a href="/blog" className="text-blue-500 dark:text-blue-400 text-sm no-underline hover:underline">
-            View all →
-          </a>
-        </div>
+        <h2 className="text-3xl font-bold mb-6">Latest Articles</h2>
         {posts.length === 0 ? (
           <p className="text-gray-600 dark:text-gray-400">No blog posts yet. Check back soon!</p>
         ) : (

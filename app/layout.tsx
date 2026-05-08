@@ -56,6 +56,9 @@ export default function RootLayout({
               <a href="/#about" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
                 About
               </a>
+              <a href="/#stack" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
+                Stack
+              </a>
               <a href="/#projects" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
                 Projects
               </a>
@@ -64,6 +67,9 @@ export default function RootLayout({
               </a>
               <a href="/#upcoming" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
                 What's next
+              </a>
+              <a href="/setup" className="no-underline text-blue-500 dark:text-blue-400 font-medium hover:underline">
+                Setup guide
               </a>
               {mounted && (
                 <button
