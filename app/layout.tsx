@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Valentin Houssais',
-  description: 'Shipping AI products. Learning in public.',
+  title: 'Valentin Houssais | Shipping AI Products',
+  description: 'Building and shipping AI products. Learning in public.',
   icons: {
     icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-weight="bold">V</text></svg>',
   },
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-black">
+      <body className="bg-white text-gray-900">
         {children}
       </body>
     </html>
