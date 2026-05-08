@@ -1,37 +1,99 @@
-<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+<svg width="1600" height="900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
   <defs>
-    <linearGradient id="plantGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    <linearGradient id="plantBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#064e3b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#065f46;stop-opacity:1"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#plantGrad)"/>
+  <rect width="1600" height="900" fill="url(#plantBg)"/>
 
-  <!-- Plant illustrations -->
-  <!-- Left plant -->
-  <line x1="250" y1="450" x2="250" y2="250" stroke="white" stroke-width="8" opacity="0.8"/>
-  <ellipse cx="220" cy="280" rx="35" ry="50" fill="white" opacity="0.7" transform="rotate(-30 220 280)"/>
-  <ellipse cx="280" cy="270" rx="35" ry="50" fill="white" opacity="0.7" transform="rotate(30 280 270)"/>
-  <ellipse cx="250" cy="240" rx="40" ry="55" fill="white" opacity="0.8"/>
+  <!-- Grid -->
+  <g opacity="0.08" stroke="#10b981" stroke-width="1">
+    <line x1="0" y1="150" x2="1600" y2="150"/>
+    <line x1="0" y1="300" x2="1600" y2="300"/>
+    <line x1="0" y1="450" x2="1600" y2="450"/>
+    <line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="750" x2="1600" y2="750"/>
+    <line x1="200" y1="0" x2="200" y2="900"/>
+    <line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="800" y1="0" x2="800" y2="900"/>
+    <line x1="1000" y1="0" x2="1000" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+    <line x1="1400" y1="0" x2="1400" y2="900"/>
+  </g>
 
-  <!-- Right plant -->
-  <line x1="950" y1="480" x2="950" y2="220" stroke="white" stroke-width="10" opacity="0.8"/>
-  <ellipse cx="910" cy="260" rx="40" ry="60" fill="white" opacity="0.75" transform="rotate(-35 910 260)"/>
-  <ellipse cx="990" cy="240" rx="40" ry="60" fill="white" opacity="0.75" transform="rotate(35 990 240)"/>
-  <ellipse cx="950" cy="200" rx="45" ry="65" fill="white" opacity="0.85"/>
-  <ellipse cx="930" cy="180" rx="30" ry="40" fill="white" opacity="0.8"/>
-  <ellipse cx="970" cy="175" rx="30" ry="40" fill="white" opacity="0.8"/>
+  <!-- Camera viewfinder frame -->
+  <g opacity="0.6">
+    <line x1="280" y1="180" x2="280" y2="240" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+    <line x1="280" y1="180" x2="340" y2="180" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+
+    <line x1="1320" y1="180" x2="1320" y2="240" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+    <line x1="1320" y1="180" x2="1260" y2="180" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+
+    <line x1="280" y1="720" x2="280" y2="660" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+    <line x1="280" y1="720" x2="340" y2="720" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+
+    <line x1="1320" y1="720" x2="1320" y2="660" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+    <line x1="1320" y1="720" x2="1260" y2="720" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+  </g>
 
   <!-- Pot -->
-  <rect x="920" y="480" width="60" height="50" fill="white" opacity="0.3" rx="2"/>
+  <path d="M 700 700 L 750 850 L 850 850 L 900 700 Z" fill="#92400e"/>
+  <rect x="690" y="695" width="220" height="20" rx="4" fill="#78350f"/>
 
-  <!-- Camera icon in center -->
-  <circle cx="600" cy="315" r="60" fill="white" opacity="0.15"/>
-  <circle cx="600" cy="315" r="45" fill="none" stroke="white" stroke-width="6" opacity="0.4"/>
-  <circle cx="600" cy="315" r="30" fill="none" stroke="white" stroke-width="4" opacity="0.5"/>
-  <circle cx="600" cy="315" r="8" fill="white" opacity="0.6"/>
+  <!-- Plant -->
+  <g>
+    <!-- Stem -->
+    <path d="M 800 700 Q 790 600 795 500 Q 800 400 800 350" stroke="#15803d" stroke-width="8" fill="none"/>
 
-  <!-- Text -->
-  <text x="600" y="500" font-size="56" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial, sans-serif">Plant App</text>
-  <text x="600" y="560" font-size="24" text-anchor="middle" fill="white" opacity="0.9" font-family="Arial, sans-serif">AI Plant Care with Computer Vision</text>
+    <!-- Big center leaf -->
+    <ellipse cx="800" cy="380" rx="50" ry="80" fill="#22c55e"/>
+    <line x1="800" y1="320" x2="800" y2="450" stroke="#15803d" stroke-width="2"/>
+
+    <!-- Left leaves -->
+    <ellipse cx="730" cy="450" rx="55" ry="35" fill="#16a34a" transform="rotate(-30 730 450)"/>
+    <ellipse cx="710" cy="550" rx="50" ry="30" fill="#22c55e" transform="rotate(-20 710 550)"/>
+    <ellipse cx="730" cy="630" rx="45" ry="28" fill="#16a34a" transform="rotate(-10 730 630)"/>
+
+    <!-- Right leaves -->
+    <ellipse cx="870" cy="430" rx="55" ry="35" fill="#22c55e" transform="rotate(30 870 430)"/>
+    <ellipse cx="890" cy="520" rx="50" ry="30" fill="#16a34a" transform="rotate(20 890 520)"/>
+    <ellipse cx="870" cy="620" rx="45" ry="28" fill="#22c55e" transform="rotate(15 870 620)"/>
+
+    <!-- Top leaves -->
+    <ellipse cx="770" cy="290" rx="35" ry="25" fill="#22c55e" transform="rotate(-45 770 290)"/>
+    <ellipse cx="830" cy="290" rx="35" ry="25" fill="#16a34a" transform="rotate(45 830 290)"/>
+  </g>
+
+  <!-- ID Tag pointer line -->
+  <line x1="800" y1="380" x2="1100" y2="280" stroke="#10b981" stroke-width="2" stroke-dasharray="6,4" opacity="0.7"/>
+  <circle cx="800" cy="380" r="6" fill="#10b981"/>
+
+  <!-- ID Card -->
+  <rect x="1100" y="200" width="320" height="160" rx="12" fill="white" stroke="#10b981" stroke-width="2"/>
+  <text x="1120" y="240" font-family="Arial" font-size="13" font-weight="bold" fill="#10b981">IDENTIFIED ✓</text>
+
+  <text x="1120" y="275" font-family="Arial" font-size="20" font-weight="bold" fill="#064e3b">Monstera Deliciosa</text>
+  <text x="1120" y="300" font-family="Arial" font-size="13" fill="#64748b">Confidence: 98.7%</text>
+
+  <text x="1120" y="330" font-family="Arial" font-size="13" fill="#475569">💧 Water in 3 days</text>
+  <text x="1120" y="350" font-family="Arial" font-size="13" fill="#475569">☀️ Indirect sunlight</text>
+
+  <!-- Health card -->
+  <rect x="200" y="350" width="280" height="180" rx="12" fill="white"/>
+  <text x="220" y="385" font-family="Arial" font-size="13" font-weight="bold" fill="#10b981">PLANT HEALTH</text>
+
+  <!-- Health bar -->
+  <rect x="220" y="400" width="240" height="10" rx="5" fill="#dcfce7"/>
+  <rect x="220" y="400" width="216" height="10" rx="5" fill="#10b981"/>
+  <text x="220" y="430" font-family="Arial" font-size="14" fill="#065f46">Healthy 90%</text>
+
+  <!-- Stats -->
+  <text x="220" y="465" font-family="Arial" font-size="13" fill="#475569">Last watered: 4 days ago</text>
+  <text x="220" y="485" font-family="Arial" font-size="13" fill="#475569">Light: Optimal</text>
+  <text x="220" y="505" font-family="Arial" font-size="13" fill="#f59e0b">⚠ Needs water soon</text>
+
+  <!-- Camera shutter target -->
+  <circle cx="800" cy="500" r="80" fill="none" stroke="white" stroke-width="3" opacity="0.0"/>
 </svg>

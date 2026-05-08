@@ -2,6 +2,9 @@
 title: "Why I Learn in Public (And Why You Should Too)"
 publishDate: "2025-04-15"
 excerpt: "Sharing your progress, mistakes, and learnings accelerates your growth and helps others. Here's why I chose transparency over perfection."
+coverImage: "/blog/learning-in-public.svg"
+category: "Mindset"
+readTime: "4 min read"
 ---
 
 Most people hide their work until it's polished. Most people hide their failures completely.

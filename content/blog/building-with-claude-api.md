@@ -2,6 +2,9 @@
 title: "Building with Claude API: Lessons from Polish App"
 publishDate: "2025-05-01"
 excerpt: "A deep dive into how I integrated Claude's API into Polish App and what I learned about prompt engineering, token optimization, and user-facing AI."
+coverImage: "/blog/building-with-claude-api.svg"
+category: "Engineering"
+readTime: "6 min read"
 ---
 
 When I started building Polish App, I knew I wanted AI at the core, but I didn't anticipate how much the quality of integration would matter.

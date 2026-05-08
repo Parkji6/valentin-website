@@ -19,6 +19,9 @@ export interface BlogMeta {
   title: string;
   publishDate: string;
   excerpt: string;
+  coverImage?: string;
+  category?: string;
+  readTime?: string;
 }
 
 export interface Project extends ProjectMeta {
