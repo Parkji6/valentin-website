@@ -62,7 +62,7 @@ export default function RootLayout({
               <a href="/#projects" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
                 Projects
               </a>
-              <a href="/#blog" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
+              <a href="/blog" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
                 Blog
               </a>
               <a href="/#upcoming" className="no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50">
@@ -101,7 +101,7 @@ export default function RootLayout({
                     </a>
                   </li>
                   <li>
-                    <a href="/#blog" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500">
+                    <a href="/blog" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500">
                       Blog
                     </a>
                   </li>
