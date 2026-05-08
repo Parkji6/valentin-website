@@ -3,7 +3,7 @@ title: "Plant App"
 status: "In progress"
 problem: "Plant owners struggle to remember watering schedules and care requirements"
 tech: ["React Native", "Node.js", "PostgreSQL", "Computer Vision"]
-image: "/projects/plant-app.png"
+image: "/projects/plant-app.svg"
 learned: "Computer vision for plant identification is promising but requires careful training data curation. User retention is highest when the app provides tangible value beyond tracking."
 liveUrl: "https://plant-app.example.com"
 githubUrl: "https://github.com/valentin-h/plant-app"

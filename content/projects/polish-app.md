@@ -3,7 +3,7 @@ title: "Polish App"
 status: "Shipped"
 problem: "Making Polish learning accessible and engaging"
 tech: ["Next.js", "React", "TypeScript", "AI"]
-image: "/projects/polish-app.png"
+image: "/projects/polish-app.svg"
 learned: "Building language learning products requires balancing spaced repetition with user engagement. AI-powered personalization significantly improves retention rates."
 liveUrl: "https://polish-app.example.com"
 githubUrl: "https://github.com/valentin-h/polish-app"

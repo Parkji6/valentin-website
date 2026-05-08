@@ -3,7 +3,7 @@ title: "Personal AI Assistant"
 status: "Archived"
 problem: "Need a lightweight, privacy-first AI assistant for task management"
 tech: ["Python", "FastAPI", "SQLite", "Claude API"]
-image: "/projects/personal-assistant.png"
+image: "/projects/personal-assistant.svg"
 learned: "Privacy-first design is complex but essential. Learned that local-first with optional sync is more secure than cloud-first with local fallbacks."
 githubUrl: "https://github.com/valentin-h/personal-assistant"
 ---
