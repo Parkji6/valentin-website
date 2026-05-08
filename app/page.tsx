@@ -61,11 +61,10 @@ export default function Home() {
         {/* Image / Video toggle */}
         <HeroMedia />
 
-        {/* Collapsible prompt caption */}
         <details className="group mt-4 border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden">
           <summary className="flex items-center justify-between px-4 py-3 cursor-pointer text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 list-none">
             <span>
-              <span className="font-medium text-gray-700 dark:text-gray-300">Generated with Gemini</span>
+              <span className="font-medium text-gray-700 dark:text-gray-300">Generated with Gemini & Canva</span>
               {' '}— click to see the prompts used
             </span>
             <span className="transition-transform group-open:rotate-180">↓</span>
@@ -73,13 +72,13 @@ export default function Home() {
           <div className="px-4 pb-4 border-t border-gray-200 dark:border-gray-800">
             <div className="mt-4 space-y-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Image prompt</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Image prompt — Gemini</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed bg-gray-50 dark:bg-gray-900 rounded p-3 font-mono">
                   A wide cinematic illustration of a person at a desk late at night, excited and focused, building something on a PC with two monitors. The right screen shows code and a Polish learning app interface. On the wall behind them, a roadmap with sticky notes: "Polish App ✓", "Website ✓", "Personal Assistant", "Budget Manager"... On a second screen to the left, a LinkedIn feed is visible filled with generic AI hype posts — "10 prompts that will change your life", "AI will replace you if you don't follow these steps", notification bubbles everywhere. The person is clearly ignoring it, turned toward their own work. Warm desk lamp light on the right, cold blue LinkedIn glow on the left. The mood is: I stopped scrolling, I started building. Detailed, editorial illustration style, slightly cinematic.
                 </p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Video prompt</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Video prompt — Canva</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed bg-gray-50 dark:bg-gray-900 rounded p-3 font-mono">
                   Cinematic short video, 5-10 seconds, no dialogue. A person sits at a desk late at night with two monitors. Camera slowly pushes in from behind. Left monitor: a LinkedIn feed scrolling automatically, filled with AI hype posts — "10 prompts that will change your life", notification bubbles piling up, cold blue glow. Right monitor: code editor open, a Polish learning app interface visible, warm desk lamp light. The person's hands move to the keyboard — they start typing on the right screen, completely ignoring the left. On the wall, sticky notes: "Polish App ✓", "Website ✓", "Personal Assistant"... Camera ends on a close-up of the right screen as code appears. Mood: I stopped scrolling, I started building. Cinematic color grading, editorial illustration style, slightly animated.
                 </p>
