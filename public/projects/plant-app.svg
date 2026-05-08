@@ -1,15 +1,37 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="plantGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#grad2)"/>
-  <text x="600" y="315" font-size="72" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Arial, sans-serif">
-    Plant App
-  </text>
-  <text x="600" y="380" font-size="32" text-anchor="middle" fill="white" opacity="0.8" font-family="Arial, sans-serif">
-    AI-Powered Plant Care
-  </text>
+  <rect width="1200" height="630" fill="url(#plantGrad)"/>
+
+  <!-- Plant illustrations -->
+  <!-- Left plant -->
+  <line x1="250" y1="450" x2="250" y2="250" stroke="white" stroke-width="8" opacity="0.8"/>
+  <ellipse cx="220" cy="280" rx="35" ry="50" fill="white" opacity="0.7" transform="rotate(-30 220 280)"/>
+  <ellipse cx="280" cy="270" rx="35" ry="50" fill="white" opacity="0.7" transform="rotate(30 280 270)"/>
+  <ellipse cx="250" cy="240" rx="40" ry="55" fill="white" opacity="0.8"/>
+
+  <!-- Right plant -->
+  <line x1="950" y1="480" x2="950" y2="220" stroke="white" stroke-width="10" opacity="0.8"/>
+  <ellipse cx="910" cy="260" rx="40" ry="60" fill="white" opacity="0.75" transform="rotate(-35 910 260)"/>
+  <ellipse cx="990" cy="240" rx="40" ry="60" fill="white" opacity="0.75" transform="rotate(35 990 240)"/>
+  <ellipse cx="950" cy="200" rx="45" ry="65" fill="white" opacity="0.85"/>
+  <ellipse cx="930" cy="180" rx="30" ry="40" fill="white" opacity="0.8"/>
+  <ellipse cx="970" cy="175" rx="30" ry="40" fill="white" opacity="0.8"/>
+
+  <!-- Pot -->
+  <rect x="920" y="480" width="60" height="50" fill="white" opacity="0.3" rx="2"/>
+
+  <!-- Camera icon in center -->
+  <circle cx="600" cy="315" r="60" fill="white" opacity="0.15"/>
+  <circle cx="600" cy="315" r="45" fill="none" stroke="white" stroke-width="6" opacity="0.4"/>
+  <circle cx="600" cy="315" r="30" fill="none" stroke="white" stroke-width="4" opacity="0.5"/>
+  <circle cx="600" cy="315" r="8" fill="white" opacity="0.6"/>
+
+  <!-- Text -->
+  <text x="600" y="500" font-size="56" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial, sans-serif">Plant App</text>
+  <text x="600" y="560" font-size="24" text-anchor="middle" fill="white" opacity="0.9" font-family="Arial, sans-serif">AI Plant Care with Computer Vision</text>
 </svg>

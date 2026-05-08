@@ -1,15 +1,39 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="privacyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#grad3)"/>
-  <text x="600" y="315" font-size="72" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Arial, sans-serif">
-    Personal Assistant
-  </text>
-  <text x="600" y="380" font-size="32" text-anchor="middle" fill="white" opacity="0.8" font-family="Arial, sans-serif">
-    Privacy-First AI
-  </text>
+  <rect width="1200" height="630" fill="url(#privacyGrad)"/>
+
+  <!-- Lock/Privacy vault -->
+  <g opacity="0.3">
+    <!-- Outer shield -->
+    <path d="M 600 150 L 750 250 L 750 450 Q 600 530 600 530 Q 450 530 450 450 L 450 250 Z" fill="white" stroke="white" stroke-width="2"/>
+  </g>
+
+  <!-- Central lock -->
+  <rect x="550" y="280" width="100" height="100" fill="white" opacity="0.2" rx="8"/>
+  <circle cx="600" cy="310" r="12" fill="white" opacity="0.3"/>
+  <rect x="595" y="330" width="10" height="35" fill="white" opacity="0.25"/>
+
+  <!-- Data nodes -->
+  <circle cx="350" cy="200" r="30" fill="white" opacity="0.15"/>
+  <circle cx="850" cy="250" r="30" fill="white" opacity="0.15"/>
+  <circle cx="400" cy="480" r="30" fill="white" opacity="0.15"/>
+  <circle cx="800" cy="450" r="30" fill="white" opacity="0.15"/>
+
+  <!-- Connecting lines (local network) -->
+  <line x1="380" y1="200" x2="550" y2="280" stroke="white" stroke-width="2" opacity="0.2"/>
+  <line x1="820" y1="250" x2="650" y2="300" stroke="white" stroke-width="2" opacity="0.2"/>
+  <line x1="430" y1="480" x2="550" y2="350" stroke="white" stroke-width="2" opacity="0.2"/>
+  <line x1="770" y1="450" x2="650" y2="350" stroke="white" stroke-width="2" opacity="0.2"/>
+
+  <!-- Checkmark (verified/secure) -->
+  <path d="M 580 310 L 595 325 L 620 300" fill="none" stroke="white" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+
+  <!-- Text -->
+  <text x="600" y="500" font-size="56" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial, sans-serif">Personal Assistant</text>
+  <text x="600" y="560" font-size="24" text-anchor="middle" fill="white" opacity="0.9" font-family="Arial, sans-serif">Privacy-First AI • Local-First Design</text>
 </svg>
