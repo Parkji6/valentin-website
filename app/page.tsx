@@ -161,7 +161,12 @@ export default function Home() {
 
       {/* Blog Section */}
       <section id="blog" className="max-w-4xl mx-auto px-4 py-16 border-t border-gray-200 dark:border-gray-800">
-        <h2 className="text-3xl font-bold mb-6">Latest Articles</h2>
+        <div className="flex items-baseline justify-between mb-6">
+          <h2 className="text-3xl font-bold">Latest Articles</h2>
+          <a href="/blog" className="text-blue-500 dark:text-blue-400 text-sm no-underline hover:underline">
+            View all →
+          </a>
+        </div>
         {posts.length === 0 ? (
           <p className="text-gray-600 dark:text-gray-400">No blog posts yet. Check back soon!</p>
         ) : (
