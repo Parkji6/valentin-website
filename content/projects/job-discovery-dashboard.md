@@ -6,7 +6,7 @@ tech: ["Node.js", "Adzuna API", "GitHub Actions", "Vercel"]
 image: "/images/projects/job-discovery-dashboard.png"
 imageAlt: "Job discovery dashboard showing ranked executive opportunities"
 learned: "Learned how to build a real automated data pipeline, debug GitHub Actions, and why AI-generated data is useless without real API integrations"
-liveUrl: "https://github.com/Parkji6/job-hunt"
+liveUrl: "https://job-hunt-gray.vercel.app/"
 githubUrl: "https://github.com/Parkji6/job-hunt"
 ---
 

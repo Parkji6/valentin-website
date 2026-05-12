@@ -93,13 +93,13 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-6">About</h2>
         <div className="max-w-none">
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-            AI Twitter and LinkedIn are full of people selling shortcuts. Follow this, prompt that, your life will be amazing. No effort required.
+            Twitter and LinkedIn are full of people selling shortcuts. Follow this, comment that, your life will be amazing. No effort required.
           </p>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
             I wanted to see what happens when you actually do the work instead.
           </p>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-            So I'm building real tools — for myself, from scratch — and documenting everything honestly. What works, what breaks, what I learned. A Polish app, a plant tracker, a personal assistant... practical things that solve real problems.
+            So I'm building real tools — for myself, from scratch — and documenting everything honestly. What works, what breaks, what I learned. A Polish app, a job hunter dashboard, a personal assistant... practical things that solve real problems.
           </p>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-semibold">
             No hype. Just building.
