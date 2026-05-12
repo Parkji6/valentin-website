@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 
 const navLinks = [
@@ -134,6 +135,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
 
         {children}
+        <Analytics />
 
         <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-20">
           <div className="max-w-4xl mx-auto px-4 py-12">
