@@ -113,8 +113,24 @@ export default function SetupPage() {
               <div className="absolute left-0 top-1 w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-bold">
                 1
               </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-50">Install the tools</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-3">You need three things installed on your computer before anything else.</p>
+              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-50">Create your accounts</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">Start by creating these free accounts — you'll need all of them.</p>
+              <div className="space-y-2 mb-6">
+                {[
+                  { name: 'Claude', url: 'https://claude.ai', note: 'Your AI coding partner — free tier is enough to start' },
+                  { name: 'GitHub', url: 'https://github.com', note: 'Where your code lives — create a free account' },
+                  { name: 'Vercel', url: 'https://vercel.com', note: 'Where your app deploys — sign up with your GitHub account' },
+                ].map((item) => (
+                  <div key={item.name} className="flex items-center gap-2">
+                    <span className="text-blue-500">→</span>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 dark:text-blue-400 no-underline hover:underline font-medium">
+                      {item.name}
+                    </a>
+                    <span className="text-gray-500 dark:text-gray-400 text-sm">— {item.note}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">Then install these three tools on your computer.</p>
               <div className="space-y-2">
                 {[
                   { name: 'Node.js', url: 'https://nodejs.org', note: 'Download the LTS version' },
@@ -161,20 +177,26 @@ export default function SetupPage() {
                 3
               </div>
               <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-50">Set up your environment variables</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-3">
-                Most projects need API keys to work. These are secret — never commit them to GitHub.
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Most projects need API keys to work. These are secret — never commit them to GitHub. Each project's README lists the exact variables needed, but here's what each one requires.
               </p>
-              <div className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 font-mono text-sm text-gray-100 mb-3">
-                <p className="text-gray-500 mb-1"># Create a .env.local file in the root folder</p>
-                <p>ANTHROPIC_API_KEY=your_key_here</p>
+              <div className="space-y-4 mb-4">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Polish App — create a <span className="font-mono">.env.local</span> file</p>
+                  <div className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 font-mono text-sm text-gray-100">
+                    <p>ANTHROPIC_API_KEY=your_key_here</p>
+                  </div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Get it at <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline no-underline">console.anthropic.com</a> — free credits to start</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Job Discovery Dashboard — create a <span className="font-mono">.env</span> file</p>
+                  <div className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 font-mono text-sm text-gray-100">
+                    <p>ADZUNA_APP_ID=your_app_id_here</p>
+                    <p>ADZUNA_API_KEY=your_key_here</p>
+                  </div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Get it at <a href="https://developer.adzuna.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline no-underline">developer.adzuna.com</a> — free, takes 2 minutes to register</p>
+                </div>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Get your Claude API key at{' '}
-                <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline no-underline">
-                  console.anthropic.com
-                </a>
-                . Each project's README will tell you exactly which variables you need.
-              </p>
             </div>
 
             {/* Step 4 */}
@@ -184,16 +206,25 @@ export default function SetupPage() {
               </div>
               <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-50">Run it locally</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
-                Start the development server and open your browser.
+                The command depends on the project type.
               </p>
-              <div className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 font-mono text-sm text-gray-100 mb-3">
-                <p>npm run dev</p>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Next.js projects (Polish App)</p>
+                  <div className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 font-mono text-sm text-gray-100 mb-1">
+                    <p>npm run dev</p>
+                  </div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Then open <span className="font-mono text-blue-500">http://localhost:3000</span> in your browser.</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Script-based projects (Job Discovery Dashboard)</p>
+                  <div className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 font-mono text-sm text-gray-100 mb-1">
+                    <p className="text-gray-500 mb-1"># Run the fetch script manually to test it</p>
+                    <p>node fetch-jobs.js</p>
+                  </div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">This generates the data. Open the <span className="font-mono">index.html</span> file in your browser to see the dashboard. In production, GitHub Actions runs this automatically every morning.</p>
+                </div>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Open{' '}
-                <span className="font-mono text-blue-500">http://localhost:3000</span>
-                {' '}in your browser. You should see the app running.
-              </p>
             </div>
 
             {/* Step 5 */}
