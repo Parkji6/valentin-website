@@ -42,16 +42,17 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
         <div
           className="prose dark:prose-invert prose-lg max-w-none
-            prose-headings:font-bold prose-headings:mb-4
+            prose-headings:font-display prose-headings:tracking-tight prose-headings:mb-4
             prose-h2:text-3xl prose-h3:text-2xl
             prose-p:text-gray-700 dark:prose-p:text-gray-300
-            prose-a:text-blue-500 dark:prose-a:text-blue-400
-            prose-code:bg-gray-100 dark:prose-code:bg-gray-800
-            prose-pre:bg-gray-100 dark:prose-pre:bg-gray-800"
+            prose-a:text-blue-600 dark:prose-a:text-blue-400
+            prose-strong:text-gray-900 dark:prose-strong:text-white
+            prose-code:bg-gray-100 dark:prose-code:bg-ink-800 prose-code:before:content-none prose-code:after:content-none
+            prose-pre:bg-gray-100 dark:prose-pre:bg-ink-800"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
-        <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-8">
+        <div className="border-t border-gray-200 dark:border-ink-800 mt-12 pt-8">
           <a href="/#blog" className="text-blue-500 dark:text-blue-400 text-sm no-underline hover:underline">
             ← Back to blog
           </a>

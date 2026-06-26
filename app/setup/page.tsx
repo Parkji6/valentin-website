@@ -8,7 +8,7 @@ export default function SetupPage() {
           <a href="/" className="text-blue-500 dark:text-blue-400 text-sm no-underline hover:underline">
             ← Back to home
           </a>
-          <h1 className="text-4xl font-bold mt-6 mb-4 text-gray-900 dark:text-gray-50">
+          <h1 className="text-4xl font-bold mt-6 mb-4 text-gray-900 dark:text-white">
             My setup & how to make it yours
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -18,7 +18,7 @@ export default function SetupPage() {
 
         {/* The Stack */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-50">The stack</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">The stack</h2>
           <div className="space-y-6">
             {[
               {
@@ -70,7 +70,7 @@ export default function SetupPage() {
                 tip: 'Don\'t fight it. The first hour feels odd. After that, you\'ll never want to go back to writing raw CSS.',
               },
             ].map((tool) => (
-              <div key={tool.name} className="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
+              <div key={tool.name} className="border border-gray-200 dark:border-ink-800 rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">{tool.icon}</span>
                   <div>
@@ -78,7 +78,7 @@ export default function SetupPage() {
                       href={tool.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-bold text-gray-900 dark:text-gray-50 hover:text-blue-500 no-underline"
+                      className="font-bold text-gray-900 dark:text-white hover:text-blue-500 no-underline"
                     >
                       {tool.name}
                     </a>
@@ -88,9 +88,9 @@ export default function SetupPage() {
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">{tool.description}</p>
-                <div className="bg-gray-50 dark:bg-gray-900 rounded p-3 border-l-2 border-blue-500">
+                <div className="bg-gray-50 dark:bg-ink-900 rounded p-3 border-l-2 border-blue-500">
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    <span className="font-semibold text-gray-900 dark:text-gray-50">Tip: </span>
+                    <span className="font-semibold text-gray-900 dark:text-white">Tip: </span>
                     {tool.tip}
                   </p>
                 </div>
@@ -101,7 +101,7 @@ export default function SetupPage() {
 
         {/* Make it your own */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-gray-50">Make it your own</h2>
+          <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Make it your own</h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
             Every project I build is open source. Here's how to clone any of them, run it locally, and deploy your own version — from scratch to live in under an hour.
           </p>
@@ -113,7 +113,7 @@ export default function SetupPage() {
               <div className="absolute left-0 top-1 w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-bold">
                 1
               </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-50">Create your accounts</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">Create your accounts</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">Start by creating these free accounts — you'll need all of them.</p>
               <div className="space-y-2 mb-6">
                 {[
@@ -153,7 +153,7 @@ export default function SetupPage() {
               <div className="absolute left-0 top-1 w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-bold">
                 2
               </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-50">Pick a project to clone</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">Pick a project to clone</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Go to{' '}
                 <a href="https://github.com/Parkji6" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline no-underline">
@@ -176,20 +176,20 @@ export default function SetupPage() {
               <div className="absolute left-0 top-1 w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-bold">
                 3
               </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-50">Set up your environment variables</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">Set up your environment variables</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
                 Most projects need API keys to work. These are secret — never commit them to GitHub. Each project's README lists the exact variables needed, but here's what each one requires.
               </p>
               <div className="space-y-4 mb-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Polish App — create a <span className="font-mono">.env.local</span> file</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-white0 mb-2">Polish App — create a <span className="font-mono">.env.local</span> file</p>
                   <div className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 font-mono text-sm text-gray-100">
                     <p>ANTHROPIC_API_KEY=your_key_here</p>
                   </div>
                   <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Get it at <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline no-underline">console.anthropic.com</a> — free credits to start</p>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Job Discovery Dashboard — create a <span className="font-mono">.env</span> file</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-white0 mb-2">Job Discovery Dashboard — create a <span className="font-mono">.env</span> file</p>
                   <div className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 font-mono text-sm text-gray-100">
                     <p>ADZUNA_APP_ID=your_app_id_here</p>
                     <p>ADZUNA_API_KEY=your_key_here</p>
@@ -204,20 +204,20 @@ export default function SetupPage() {
               <div className="absolute left-0 top-1 w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-bold">
                 4
               </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-50">Run it locally</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">Run it locally</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 The command depends on the project type.
               </p>
               <div className="space-y-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Next.js projects (Polish App)</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-white0 mb-2">Next.js projects (Polish App)</p>
                   <div className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 font-mono text-sm text-gray-100 mb-1">
                     <p>npm run dev</p>
                   </div>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Then open <span className="font-mono text-blue-500">http://localhost:3000</span> in your browser.</p>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Script-based projects (Job Discovery Dashboard)</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-white0 mb-2">Script-based projects (Job Discovery Dashboard)</p>
                   <div className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 font-mono text-sm text-gray-100 mb-1">
                     <p className="text-gray-500 mb-1"># Run the fetch script manually to test it</p>
                     <p>node fetch-jobs.js</p>
@@ -232,7 +232,7 @@ export default function SetupPage() {
               <div className="absolute left-0 top-1 w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-bold">
                 5
               </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-50">Make it yours</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">Make it yours</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Edit the code in VS Code. Every project has a clear folder structure. The most important files are usually:
               </p>
@@ -246,7 +246,7 @@ export default function SetupPage() {
                   <div key={item.file} className="flex items-start gap-2">
                     <span className="text-blue-500 mt-0.5">→</span>
                     <div>
-                      <span className="font-mono text-sm text-gray-900 dark:text-gray-50">{item.file}</span>
+                      <span className="font-mono text-sm text-gray-900 dark:text-white">{item.file}</span>
                       <span className="text-gray-500 dark:text-gray-400 text-sm"> — {item.desc}</span>
                     </div>
                   </div>
@@ -259,7 +259,7 @@ export default function SetupPage() {
               <div className="absolute left-0 top-1 w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-bold">
                 6
               </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-50">Deploy it live</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">Deploy it live</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Push your code to GitHub, then connect it to Vercel.
               </p>
@@ -284,14 +284,14 @@ export default function SetupPage() {
         </section>
 
         {/* Questions */}
-        <section className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 text-center">
-          <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-50">Stuck? Have a question?</h2>
+        <section className="border border-gray-200 dark:border-ink-800 rounded-lg p-6 text-center">
+          <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Stuck? Have a question?</h2>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             I'm happy to help. Send me a message and I'll do my best to answer.
           </p>
           <a
             href="/contact"
-            className="inline-block px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold no-underline hover:bg-blue-600 transition-colors"
+            className="inline-block px-6 py-3 bg-blue-600 text-white rounded-full font-semibold no-underline hover:bg-blue-500 hover:no-underline transition-colors"
           >
             Get in touch
           </a>
