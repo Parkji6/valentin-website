@@ -122,7 +122,7 @@ export default function Home() {
           {[
             { name: 'Claude', url: 'https://claude.ai', icon: '🤖', reason: 'My co-builder. Planning, coding, debugging — I use it for everything.' },
             { name: 'VS Code', url: 'https://code.visualstudio.com', icon: '💻', reason: 'Where I write and edit code. Simple, fast, free.' },
-            { name: 'GitHub', url: 'https://github.com/Parkji6', icon: '🐙', reason: 'All my code lives here. Every project is open source.' },
+            { name: 'GitHub', url: 'https://github.com', icon: '🐙', reason: 'Version control and where my code lives. Repos are private — happy to share any on request.' },
             { name: 'Vercel', url: 'https://vercel.com', icon: '▲', reason: 'One click to deploy. Free for personal projects.' },
             { name: 'Next.js', url: 'https://nextjs.org', icon: '⚡', reason: 'React framework I use for every web project.' },
             { name: 'Tailwind CSS', url: 'https://tailwindcss.com', icon: '🎨', reason: 'Makes styling fast without writing custom CSS.' },
@@ -204,12 +204,10 @@ export default function Home() {
                   </a>
                   {project.githubUrl && (
                     <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={`mailto:valentin.houssais@gmail.com?subject=Code access request for ${project.title}`}
                       className="text-gray-500 dark:text-gray-400 text-sm no-underline hover:underline"
                     >
-                      Code →
+                      Request code →
                     </a>
                   )}
                 </div>

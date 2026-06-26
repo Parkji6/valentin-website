@@ -70,7 +70,7 @@ If I built this again from scratch:
 
 The app is private (it runs on my own API keys), but I'm happy to give a walkthrough or access on request — just [email me](mailto:valentin.houssais@gmail.com?subject=Polish%20App%20access).
 
-The code is on GitHub: [github.com/Parkji6/polish-app](https://github.com/Parkji6/polish-app)
+The code isn't public — it runs on my own API keys — but I'm happy to share the repo on request. Just [email me](mailto:valentin.houssais@gmail.com?subject=Polish%20App%20code%20access).
 
 It's not polished. It's a real tool I use, built by someone who was learning both Polish and how to build with AI at the same time. The imperfections are part of the documentation.
 

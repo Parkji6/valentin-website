@@ -40,9 +40,9 @@ export default function SetupPage() {
               {
                 icon: '🐙',
                 name: 'GitHub',
-                url: 'https://github.com/Parkji6',
+                url: 'https://github.com',
                 role: 'The home for code',
-                description: 'Every project I build lives on GitHub. It\'s version control (you can undo anything), a backup, and a portfolio all in one. All my repos are public — feel free to fork any of them.',
+                description: 'Every project I build lives on GitHub. It\'s version control (you can undo anything), a backup, and a portfolio all in one. My repos are private — but I\'m happy to share any of them on request.',
                 tip: 'Commit often. Even if the message is just "fix bug" or "add feature". You\'ll thank yourself later.',
               },
               {
@@ -153,19 +153,19 @@ export default function SetupPage() {
               <div className="absolute left-0 top-1 w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-bold">
                 2
               </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">Pick a project to clone</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">Pick a project</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
-                Go to{' '}
-                <a href="https://github.com/Parkji6" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline no-underline">
-                  my GitHub
+                My repos are private (they run on my own API keys), but I&apos;m happy to share any of them.{' '}
+                <a href="mailto:valentin.houssais@gmail.com?subject=Repo access request" className="text-blue-500 hover:underline no-underline">
+                  Request access
                 </a>
-                {' '}and pick any repo. Let's use the Polish App as an example.
+                {' '}and I&apos;ll send you the repo URL. Then clone it:
               </p>
               <div className="bg-gray-900 dark:bg-gray-950 rounded-lg p-4 font-mono text-sm text-gray-100">
-                <p className="text-gray-500 mb-1"># Clone the repo</p>
-                <p>git clone https://github.com/Parkji6/polish-app.git</p>
+                <p className="text-gray-500 mb-1"># Clone the repo (use the URL I send you)</p>
+                <p>git clone &lt;repo-url&gt;</p>
                 <p className="mt-2 text-gray-500"># Go into the folder</p>
-                <p>cd polish-app</p>
+                <p>cd &lt;project-folder&gt;</p>
                 <p className="mt-2 text-gray-500"># Install dependencies</p>
                 <p>npm install</p>
               </div>

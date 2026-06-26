@@ -7,28 +7,51 @@ status: "In progress"
 order: 3
 problem: "My morning information is scattered across five apps — email, calendar, news, weather, tasks — and pulling it together every day is friction I wanted to remove."
 tech: ["Next.js", "Claude API", "Vercel"]
-learned: "(placeholder — what did you learn building this?)"
+learned: "Early lesson: the hard part isn't calling the model, it's deciding what's worth showing. A good assistant is mostly good filtering."
 githubUrl: "https://github.com/Parkji6"
 ---
 
 ## Overview
 
-_(Placeholder — replace with a short paragraph on what the Personal Assistant does and why you built it.)_
+Every morning I open the same five apps in the same order: email, calendar, a news site, the weather, my task list. None of it takes long on its own, but the context-switching does — and by the time I've checked everything I've already lost the thread of what actually matters today.
 
-A personal AI assistant that assembles a single morning briefing from the tools I already use, so I start the day with one screen instead of five.
+The Personal Assistant is my attempt to collapse that ritual into a single screen: one AI-generated briefing that reads my inputs, decides what's worth surfacing, and gives me the day in a paragraph instead of five tabs.
+
+This one is still **in progress** — what follows is how it's designed and what I've learned building it so far, not a finished product.
 
 ## The problem
 
-My morning information is scattered across five apps — email, calendar, news, weather, tasks. Pulling it together every day is friction I wanted to remove.
+The issue was never access to information. It's that the information is *fragmented* and *unfiltered*. Email shows me 40 messages when 3 matter. The calendar shows raw events with no sense of which one I should prepare for. News shows everything; I want the two things relevant to me.
+
+I didn't want another dashboard with more widgets. I wanted something that does the triage I normally do in my head — and just tells me the answer.
 
 ## How it works
 
-_(Placeholder — outline the main sections / logic. For example:)_
+The assistant runs as a single morning job and produces one briefing made of a few sections:
 
-- **Briefing** — Claude summarizes overnight email, today's calendar, and relevant news into a short digest
-- **Context** — it knows my priorities and filters noise accordingly
-- **Privacy** — runs on my own keys; nothing is shared externally
+- **The headline** — Claude reads the day's calendar and unread email and writes a two-sentence summary of what actually matters today.
+- **Email triage** — instead of an inbox, I get "3 things need a reply, 1 is time-sensitive" with the rest collapsed.
+- **Calendar in context** — events annotated with what to prepare, not just times.
+- **Signal, not noise** — weather and the one or two news items relevant to me, nothing else.
+
+The model isn't doing anything magical here. The value is in the prompt: telling Claude exactly what "matters" means for me, and giving it enough context to make that call.
+
+## The approach
+
+A few decisions that shaped the build:
+
+- **It runs on my own keys, with my own data.** That's a feature, not a limitation — but it's also why this stays private. Nothing leaves my environment.
+- **Pull, summarize, discard.** The assistant fetches raw data, asks Claude to compress it, and keeps only the briefing. It doesn't try to be a second inbox.
+- **One job a day.** No real-time anything. A morning briefing is a batch problem, and treating it that way keeps it cheap and simple.
+
+## What's hard (the honest part)
+
+The modelling is the easy 20%. The hard 80% is:
+
+- **Deciding what "important" means** in a way that's consistent day to day. Too aggressive and it hides things I needed; too cautious and it's just the inbox again.
+- **Trusting the filter.** It took a while before I stopped double-checking the assistant against the real inbox — and that trust is the entire point.
+- **Auth and access.** Connecting to real email and calendar data securely is more work than the AI part.
 
 ## Status
 
-Currently building. A full walkthrough with screenshots is coming soon — [request early access](mailto:valentin.houssais@gmail.com?subject=Personal%20Assistant%20access) if you'd like a look.
+Currently building. A full walkthrough with real screenshots is coming soon. If you'd like an early look or want to compare notes on building something similar, [request access](mailto:valentin.houssais@gmail.com?subject=Personal%20Assistant%20access).

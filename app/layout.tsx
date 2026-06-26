@@ -153,8 +153,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <h3 className="font-display font-bold mb-4 text-gray-900 dark:text-white">Connect</h3>
                 <ul className="space-y-2">
                   <li>
-                    <a href="https://github.com/Parkji6" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">
-                      GitHub
+                    <a href="mailto:valentin.houssais@gmail.com?subject=Code access request" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">
+                      Source code (on request)
                     </a>
                   </li>
                   <li>

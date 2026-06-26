@@ -83,12 +83,10 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
             )}
             {project.githubUrl && (
               <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:valentin.houssais@gmail.com?subject=Code access request for ${project.title}`}
                 className="inline-flex items-center px-5 py-2.5 border border-gray-300 dark:border-ink-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-semibold no-underline hover:no-underline hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
               >
-                View code
+                Request code
               </a>
             )}
           </div>
