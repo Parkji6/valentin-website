@@ -1,5 +1,10 @@
 ---
 title: "Polish Learning App"
+tagline: "Learning Polish in context with AI-generated lessons — built after Duolingo stopped working for me."
+category: "Language learning"
+year: 2025
+featured: true
+order: 1
 status: "Shipped"
 problem: "Learning Polish in context after Duolingo wasn't providing real learning"
 tech: ["Next.js", "Claude API", "Vercel"]

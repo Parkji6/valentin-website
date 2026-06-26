@@ -1,5 +1,10 @@
 ---
 title: "Job Discovery Dashboard"
+tagline: "An automated morning briefing of real executive roles, scored to my exact criteria."
+category: "Automation"
+year: 2025
+featured: true
+order: 2
 status: "Shipped"
 problem: "Executive job searching is time-consuming and scattered across multiple platforms"
 tech: ["Node.js", "Adzuna API", "GitHub Actions", "Vercel"]

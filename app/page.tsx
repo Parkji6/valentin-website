@@ -49,8 +49,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-4 py-20">
         <div className="mb-10">
-          <p className="text-blue-500 font-semibold mb-2">Practical AI 101</p>
-          <h1 className="text-5xl font-bold mb-4 text-gray-900 dark:text-gray-50">
+          <p className="text-blue-500 dark:text-blue-400 font-semibold mb-3 tracking-wide uppercase text-sm">Practical AI 101</p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-5 text-gray-900 dark:text-white">
             Shipping AI products. Learning in public.
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -132,7 +132,7 @@ export default function Home() {
               href={tool.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-start gap-4 border border-gray-200 dark:border-gray-800 rounded-lg p-4 no-underline hover:border-blue-500 dark:hover:border-blue-400 transition-colors group"
+              className="folio-card flex items-start gap-4 p-4 no-underline group"
             >
               <span className="text-2xl">{tool.icon}</span>
               <div>
@@ -154,13 +154,13 @@ export default function Home() {
             {projects.map((project) => (
               <div
                 key={project.slug}
-                className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
+                className="folio-card p-6"
               >
                 {project.image && (
                   <img
                     src={project.image}
                     alt={project.imageAlt || project.title}
-                    className="w-full h-40 object-cover rounded mb-4"
+                    className="w-full h-40 object-cover rounded-xl mb-4"
                   />
                 )}
                 <div className="flex items-center gap-2 mb-3">
@@ -174,7 +174,11 @@ export default function Home() {
                     {project.status}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold mb-2">{project.title}</h3>
+                <h3 className="text-lg font-bold mb-2">
+                  <a href={`/projects/${project.slug}`} className="no-underline text-gray-900 dark:text-white hover:text-blue-500 hover:no-underline">
+                    {project.title}
+                  </a>
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
                   {project.problem}
                 </p>
@@ -192,20 +196,18 @@ export default function Home() {
                   <span className="font-medium">Learned:</span> {project.learned}
                 </p>
                 <div className="flex gap-4">
-                  {project.liveUrl && (
-                    <a
-                      href={`mailto:valentin.houssais@gmail.com?subject=Access request for ${project.title}`}
-                      className="text-blue-500 dark:text-blue-400 text-sm no-underline hover:underline"
-                    >
-                      Request access →
-                    </a>
-                  )}
+                  <a
+                    href={`/projects/${project.slug}`}
+                    className="text-blue-600 dark:text-blue-400 text-sm font-medium no-underline hover:underline"
+                  >
+                    Walkthrough →
+                  </a>
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-500 dark:text-blue-400 text-sm no-underline hover:underline"
+                      className="text-gray-500 dark:text-gray-400 text-sm no-underline hover:underline"
                     >
                       Code →
                     </a>
@@ -227,7 +229,7 @@ export default function Home() {
             {posts.map((post) => (
               <article
                 key={post.slug}
-                className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
+                className="folio-card p-6"
               >
                 <div className="flex gap-4">
                   {post.image && (
@@ -281,7 +283,7 @@ export default function Home() {
                 <div className={`absolute left-0 top-1.5 w-7 h-7 rounded-full border-2 bg-white dark:bg-gray-950 flex items-center justify-center text-xs font-bold ${item.dotColor}`}>
                   {index + 1}
                 </div>
-                <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-5 hover:border-blue-500 dark:hover:border-blue-400 transition-colors">
+                <div className="folio-card p-5">
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="font-bold text-gray-900 dark:text-gray-50">{item.title}</h3>
                     <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${item.statusColor}`}>
@@ -297,17 +299,19 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="max-w-4xl mx-auto px-4 py-16 border-t border-gray-200 dark:border-gray-800 text-center">
-        <h2 className="text-2xl font-bold mb-4">Let's connect</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">
-          Interested in AI, shipping products, or just want to say hi?
-        </p>
-        <a
-          href="/contact"
-          className="inline-block px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold no-underline hover:bg-blue-600 transition-colors"
-        >
-          Get in touch
-        </a>
+      <section className="max-w-4xl mx-auto px-4 py-16">
+        <div className="rounded-3xl bg-gradient-to-br from-blue-600 to-blue-500 px-8 py-14 text-center shadow-card-dark">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">Let's connect</h2>
+          <p className="text-blue-100 mb-8 max-w-md mx-auto">
+            Interested in AI, shipping products, or just want to say hi?
+          </p>
+          <a
+            href="/contact"
+            className="inline-block px-7 py-3.5 bg-white text-blue-600 rounded-full font-semibold no-underline hover:bg-blue-50 transition-colors"
+          >
+            Get in touch →
+          </a>
+        </div>
       </section>
 
     </main>
