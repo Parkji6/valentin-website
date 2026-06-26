@@ -68,7 +68,7 @@ If I built this again from scratch:
 
 ## The live app
 
-You can try it here: [polish-app-five.vercel.app](https://polish-app-five.vercel.app)
+The app is private (it runs on my own API keys), but I'm happy to give a walkthrough or access on request — just [email me](mailto:valentin.houssais@gmail.com?subject=Polish%20App%20access).
 
 The code is on GitHub: [github.com/Parkji6/polish-app](https://github.com/Parkji6/polish-app)
 

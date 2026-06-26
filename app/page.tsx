@@ -194,12 +194,10 @@ export default function Home() {
                 <div className="flex gap-4">
                   {project.liveUrl && (
                     <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={`mailto:valentin.houssais@gmail.com?subject=Access request for ${project.title}`}
                       className="text-blue-500 dark:text-blue-400 text-sm no-underline hover:underline"
                     >
-                      Live →
+                      Request access →
                     </a>
                   )}
                   {project.githubUrl && (
