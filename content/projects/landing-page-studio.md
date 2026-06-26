@@ -7,28 +7,28 @@ status: "In progress"
 order: 5
 problem: "Spinning up a decent landing page still takes hours of copywriting and layout decisions. I wanted to go from a one-line product description to a credible, editable page in minutes."
 tech: ["Next.js", "Claude API", "Tailwind CSS", "Vercel"]
-learned: "(placeholder — what did you learn building this?)"
+learned: "AI writes great copy and terrible structure. The judgment isn't in the words — it's in what to say, in what order."
 githubUrl: "https://github.com/Parkji6"
 ---
 
 ## Overview
 
-_(Placeholder — replace with a short paragraph on what Landing Page Studio does.)_
+Landing Page Studio turns a short product description into a structured, editable landing page — hero, features, social proof, and CTA — that you can tweak and ship. The goal: one line in, a credible page out, in minutes instead of hours.
 
-A tool that turns a short product description into a structured landing page — hero, features, social proof, and CTA — that you can edit and ship.
+## What it does
 
-## The problem
+- **Brief → page** — describe the product and audience; get a full page back.
+- **Copy** — headline, subhead, feature blurbs, and CTA written for the audience.
+- **Structure** — it chooses the *section order*, not just the words.
+- **Edit & export** — adjust anything and export production-ready markup.
 
-Spinning up a decent landing page still takes hours of copywriting and layout decisions. I wanted to go from a one-line product description to a credible, editable page in minutes.
+## How it's built
 
-## How it works
-
-_(Placeholder — outline the main sections / logic.)_
-
-- **Brief** — you describe the product and audience
-- **Generation** — Claude drafts copy and picks a section structure
-- **Edit & export** — tweak the result and export production-ready markup
+- **Next.js + Claude API + Tailwind CSS**, deployed on Vercel.
+- Claude drafts the copy and selects from a set of proven landing-page structures; the output renders as editable, exportable components.
 
 ## Status
 
-Currently building. Walkthrough and screenshots coming soon — [request early access](mailto:valentin.houssais@gmail.com?subject=Landing%20Page%20Studio%20access).
+In progress. Real screenshots and a live walkthrough are coming soon. [Request access](mailto:valentin.houssais@gmail.com?subject=Landing%20Page%20Studio%20access) for an early look.
+
+_For the story behind it, see: [AI writes great copy and terrible structure](/blog/ai-writes-great-copy-and-terrible-structure)._

@@ -7,28 +7,28 @@ status: "In progress"
 order: 4
 problem: "Generic AI trip plans ignore the things that matter — real budgets, travel pace, and the specific reasons you're going. I wanted a planner that adapts to context, not a templated list."
 tech: ["Next.js", "Claude API", "Vercel"]
-learned: "(placeholder — what did you learn building this?)"
+learned: "Generic plans aren't a creativity problem — they're a constraints problem. The fix was making the user define the rules first."
 githubUrl: "https://github.com/Parkji6"
 ---
 
 ## Overview
 
-_(Placeholder — replace with a short paragraph on what Trip Companion does.)_
+Trip Companion builds travel itineraries around the constraints that actually shape a trip — budget, dates, pace, and why you're going — instead of producing the same generic list everyone else gets. You set the rules; it plans within them.
 
-An AI trip planner that builds itineraries around real constraints — budget, dates, pace, and the actual purpose of the trip.
+## What it does
 
-## The problem
+- **Constraints first** — you set a budget ceiling, a pace, and any must-dos or never-dos before anything is planned.
+- **Itinerary** — a day-by-day plan tuned to your pace and interests, not a checklist of the top-10 sights.
+- **Budget that holds** — estimates that stay within your target, with trade-offs surfaced.
+- **Grounded activities** — suggestions tied to where you actually are and what's actually open.
 
-Generic AI trip plans ignore the things that matter — real budgets, travel pace, and the specific reasons you're going. I wanted a planner that adapts to context, not a templated list.
+## How it's built
 
-## How it works
-
-_(Placeholder — outline the main sections / logic.)_
-
-- **Itinerary** — day-by-day plan tuned to your pace and interests
-- **Budget** — estimates that stay within a target
-- **Activities** — suggestions grounded in where you actually are
+- **Next.js + Claude API**, deployed on Vercel.
+- The user's constraints become a structured brief; Claude plans **within** them, and the result is validated against the budget before it's shown.
 
 ## Status
 
-Currently building. Walkthrough and screenshots coming soon — [request early access](mailto:valentin.houssais@gmail.com?subject=Trip%20Companion%20access).
+In progress. Real screenshots and a live walkthrough are coming soon. [Request access](mailto:valentin.houssais@gmail.com?subject=Trip%20Companion%20access) for an early look.
+
+_For the story behind it, see: [Generic AI trip plans are useless — the fix wasn't creativity](/blog/generic-ai-trip-plans-are-useless)._
