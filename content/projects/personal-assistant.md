@@ -32,4 +32,4 @@ The Personal Assistant collapses my morning routine — five apps, same order, e
 
 In progress. Real screenshots and a live walkthrough are coming soon. Want an early look or to compare notes on building something similar? [Request access](mailto:valentin.houssais@gmail.com?subject=Personal%20Assistant%20access).
 
-_For the story of what was actually hard to build, see the article: [The hardest part of my AI assistant wasn't the AI](/blog/the-hardest-part-of-my-ai-assistant)._
+_For the story of what was actually hard to build, see the article: [The hardest part of my AI assistant wasn't the AI](/journal/the-hardest-part-of-my-ai-assistant)._

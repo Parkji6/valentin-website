@@ -31,4 +31,4 @@ Landing Page Studio turns a short product description into a structured, editabl
 
 In progress. Real screenshots and a live walkthrough are coming soon. [Request access](mailto:valentin.houssais@gmail.com?subject=Landing%20Page%20Studio%20access) for an early look.
 
-_For the story behind it, see: [AI writes great copy and terrible structure](/blog/ai-writes-great-copy-and-terrible-structure)._
+_For the story behind it, see: [AI writes great copy and terrible structure](/journal/ai-writes-great-copy-and-terrible-structure)._

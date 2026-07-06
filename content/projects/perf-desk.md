@@ -31,4 +31,4 @@ Perf Desk is a desk for reviewing performance data: it gathers the metrics, high
 
 In progress. Real screenshots and a live walkthrough are coming soon. [Request access](mailto:valentin.houssais@gmail.com?subject=Perf%20Desk%20access) for an early look.
 
-_For the story behind it, see: [Dashboards tell you what changed. I wanted to know why](/blog/dashboards-tell-you-what-changed-not-why)._
+_For the story behind it, see: [Dashboards tell you what changed. I wanted to know why](/journal/dashboards-tell-you-what-changed-not-why)._

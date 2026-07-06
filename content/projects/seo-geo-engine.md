@@ -31,4 +31,4 @@ The SEO / GEO Engine analyzes content for both traditional search ranking and vi
 
 In progress. Real screenshots and a live walkthrough are coming soon. [Request access](mailto:valentin.houssais@gmail.com?subject=SEO%20GEO%20Engine%20access) for an early look.
 
-_For the story behind it, see: [Optimizing for answer engines is not the same as SEO](/blog/optimizing-for-answer-engines-vs-google)._
+_For the story behind it, see: [Optimizing for answer engines is not the same as SEO](/journal/optimizing-for-answer-engines-vs-google)._

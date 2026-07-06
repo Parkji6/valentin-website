@@ -31,4 +31,4 @@ UX / UI Audit reviews a screen or flow and returns a structured critique — usa
 
 In progress. Real screenshots and a live walkthrough are coming soon. [Request access](mailto:valentin.houssais@gmail.com?subject=UX%20UI%20Audit%20access) for an early look.
 
-_For the story behind it, see: [Where AI design feedback helps — and where it doesn't](/blog/where-ai-design-feedback-helps)._
+_For the story behind it, see: [Where AI design feedback helps — and where it doesn't](/journal/where-ai-design-feedback-helps)._

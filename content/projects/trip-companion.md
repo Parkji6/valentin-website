@@ -31,4 +31,4 @@ Trip Companion builds travel itineraries around the constraints that actually sh
 
 In progress. Real screenshots and a live walkthrough are coming soon. [Request access](mailto:valentin.houssais@gmail.com?subject=Trip%20Companion%20access) for an early look.
 
-_For the story behind it, see: [Generic AI trip plans are useless — the fix wasn't creativity](/blog/generic-ai-trip-plans-are-useless)._
+_For the story behind it, see: [Generic AI trip plans are useless — the fix wasn't creativity](/journal/generic-ai-trip-plans-are-useless)._

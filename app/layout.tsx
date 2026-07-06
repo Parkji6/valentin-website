@@ -5,12 +5,9 @@ import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 
 const navLinks = [
-  { href: '/#about', label: 'About' },
-  { href: '/#stack', label: 'Stack' },
-  { href: '/#projects', label: 'Projects' },
-  { href: '/#blog', label: 'Blog' },
-  { href: '/#upcoming', label: "What's next" },
-  { href: '/setup', label: 'Setup guide', highlight: true },
+  { href: '/projects', label: 'Work' },
+  { href: '/journal', label: 'Journal' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 // Runs before paint so the page never flashes the wrong theme. Dark is the default.
@@ -40,8 +37,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Practical AI 101 | Shipping AI Products in Public</title>
-        <meta name="description" content="Building practical AI tools from scratch — no hype, no shortcuts. Documenting everything honestly." />
+        <title>Valentin Houssais — Building AI products in public</title>
+        <meta name="description" content="Portfolio of AI projects and a journal documenting the path — no hype, no shortcuts, just honest building." />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
@@ -50,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             {/* Logo */}
             <a href="/" className="font-display font-bold text-lg no-underline text-gray-900 dark:text-white hover:text-blue-500 hover:no-underline transition-colors">
-              Practical AI 101
+              Valentin Houssais
             </a>
 
             {/* Desktop nav */}
@@ -59,11 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`no-underline text-sm transition-colors hover:no-underline ${
-                    link.highlight
-                      ? 'text-blue-600 dark:text-blue-400 font-medium hover:text-blue-500'
-                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-                  }`}
+                  className="no-underline text-sm transition-colors hover:no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
                 >
                   {link.label}
                 </a>
@@ -117,11 +110,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     key={link.href}
                     href={link.href}
                     onClick={closeMenu}
-                    className={`no-underline text-sm py-1 ${
-                      link.highlight
-                        ? 'text-blue-600 dark:text-blue-400 font-medium'
-                        : 'text-gray-600 dark:text-gray-400'
-                    }`}
+                    className="no-underline text-sm py-1 text-gray-600 dark:text-gray-400"
                   >
                     {link.label}
                   </a>
@@ -136,56 +125,46 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <footer className="border-t border-gray-200 dark:border-ink-800 bg-gray-50 dark:bg-ink-900 mt-24">
           <div className="max-w-4xl mx-auto px-4 py-14">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
+              <div>
+                <h3 className="font-display font-bold mb-3 text-gray-900 dark:text-white">Valentin Houssais</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  Building AI products in public — the wins, the failures, and everything in between.
+                </p>
+              </div>
               <div>
                 <h3 className="font-display font-bold mb-4 text-gray-900 dark:text-white">Navigate</h3>
                 <ul className="space-y-2">
-                  {navLinks.map((link) => (
-                    <li key={link.href}>
-                      <a href={link.href} className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
+                  <li><a href="/projects" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">Work</a></li>
+                  <li><a href="/journal" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">Journal</a></li>
+                  <li><a href="/contact" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">Contact</a></li>
+                  <li><a href="/setup" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">Setup guide</a></li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-display font-bold mb-4 text-gray-900 dark:text-white">Connect</h3>
                 <ul className="space-y-2">
                   <li>
-                    <a href="mailto:valentin.houssais@gmail.com?subject=Code access request" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">
-                      Source code (on request)
-                    </a>
-                  </li>
-                  <li>
                     <a href="https://www.linkedin.com/in/valentin-houssais/" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">
                       LinkedIn
                     </a>
                   </li>
                   <li>
-                    <a href="/contact" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">
-                      Contact
+                    <a href="mailto:valentin.houssais@gmail.com?subject=Code access request" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">
+                      Source code (on request)
                     </a>
                   </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-display font-bold mb-4 text-gray-900 dark:text-white">Made with</h3>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
-                  <li>Next.js</li>
-                  <li>Tailwind CSS</li>
-                  <li>Markdown</li>
-                  <li>Vercel</li>
+                  <li>
+                    <a href="/contact" className="text-gray-600 dark:text-gray-400 no-underline hover:text-blue-500 text-sm">
+                      Email
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
             <div className="border-t border-gray-200 dark:border-ink-800 pt-8">
               <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
-                © 2025 Practical AI 101 — by{' '}
-                <a href="https://www.linkedin.com/in/valentin-houssais/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 no-underline">
-                  Valentin Houssais
-                </a>
-                . Built with Next.js & deployed on Vercel.
+                © 2026 Valentin Houssais. Built with Next.js & Claude, deployed on Vercel.
               </p>
             </div>
           </div>

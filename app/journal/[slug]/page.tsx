@@ -8,7 +8,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+export default function JournalEntry({ params }: { params: { slug: string } }) {
   const post = getBlogPost(params.slug);
 
   if (!post) {
@@ -19,10 +19,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     <main className="min-h-screen">
       <article className="max-w-3xl mx-auto px-4 py-16">
         <header className="mb-8">
-          <a href="/#blog" className="text-blue-500 dark:text-blue-400 text-sm no-underline hover:underline">
-            ← Back to blog
+          <a href="/journal" className="text-blue-600 dark:text-blue-400 text-sm no-underline hover:underline">
+            ← Back to the journal
           </a>
-          <h1 className="text-4xl font-bold mt-4 mb-4">{post.title}</h1>
+          <h1 className="text-4xl font-bold mt-4 mb-4 text-gray-900 dark:text-white">{post.title}</h1>
           <p className="text-gray-600 dark:text-gray-400">
             {new Date(post.date).toLocaleDateString('en-US', {
               year: 'numeric',
@@ -36,7 +36,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           <img
             src={post.image}
             alt={post.imageAlt || post.title}
-            className="w-full h-96 object-cover rounded-lg mb-8"
+            className="w-full h-96 object-cover rounded-2xl mb-8"
           />
         )}
 
@@ -53,8 +53,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         />
 
         <div className="border-t border-gray-200 dark:border-ink-800 mt-12 pt-8">
-          <a href="/#blog" className="text-blue-500 dark:text-blue-400 text-sm no-underline hover:underline">
-            ← Back to blog
+          <a href="/journal" className="text-blue-600 dark:text-blue-400 text-sm no-underline hover:underline">
+            ← Back to the journal
           </a>
         </div>
       </article>

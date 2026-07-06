@@ -18,7 +18,7 @@ That's when my stomach dropped a little. The model wasn't analyzing whether the 
 
 ## Signal is the hard part, not explanation
 
-This is the same lesson my [fake job data](/blog/job-discovery-dashboard) taught me, in a new outfit: AI generates convincing structure around anything, so the structure tells you nothing about whether the underlying thing is real.
+This is the same lesson my [fake job data](/journal/job-discovery-dashboard) taught me, in a new outfit: AI generates convincing structure around anything, so the structure tells you nothing about whether the underlying thing is real.
 
 The valuable part of Perf Desk turned out not to be the explanations at all. It was everything *before* the explanation — deciding which moves are even worth explaining. A number that drifts inside its normal range shouldn't get a story. It should get silence.
 
