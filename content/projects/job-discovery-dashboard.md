@@ -1,5 +1,6 @@
 ---
 title: "Job Discovery Dashboard"
+icon: "🎯"
 tagline: "An automated morning briefing of real executive roles, scored to my exact criteria."
 category: "Automation"
 year: 2025

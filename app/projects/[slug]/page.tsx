@@ -174,8 +174,8 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
 
         {/* Footer nav */}
         <div className="border-t border-gray-200 dark:border-ink-800 mt-12 pt-8">
-          <a href="/projects" className="text-blue-600 dark:text-blue-400 text-sm no-underline hover:underline">
-            ← Back to work
+          <a href="/" className="text-blue-600 dark:text-blue-400 text-sm no-underline hover:underline">
+            ← Back to the desktop
           </a>
         </div>
       </article>

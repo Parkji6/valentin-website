@@ -1,5 +1,6 @@
 ---
 title: "Trip Companion"
+icon: "🧭"
 tagline: "Context-aware trip planning with AI — itineraries, budgets, and activities that actually fit."
 category: "Travel"
 year: 2026

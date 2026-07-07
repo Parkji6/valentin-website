@@ -36,6 +36,7 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   // Walkthrough fields (optional — used by the /projects/[slug] detail page)
+  icon?: string;
   tagline?: string;
   category?: string;
   year?: string | number;
@@ -138,6 +139,7 @@ function toProjectMeta(slug: string, includeContent = false): Project | null {
     learned: data.learned || '',
     liveUrl: data.liveUrl,
     githubUrl: data.githubUrl,
+    icon: data.icon,
     tagline: data.tagline,
     category: data.category,
     year: data.year,

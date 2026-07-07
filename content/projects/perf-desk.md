@@ -1,5 +1,6 @@
 ---
 title: "Perf Desk"
+icon: "📈"
 tagline: "A performance review desk — pull the numbers, surface what changed, explain why."
 category: "Analytics"
 year: 2026

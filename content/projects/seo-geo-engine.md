@@ -1,5 +1,6 @@
 ---
 title: "SEO / GEO Engine"
+icon: "🔍"
 tagline: "Optimize for search engines and AI answer engines from one workflow."
 category: "Marketing"
 year: 2026

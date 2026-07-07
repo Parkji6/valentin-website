@@ -62,6 +62,22 @@ pre code {
   @apply bg-transparent p-0;
 }
 
+/* valentinOS desktop — graph-paper grid wallpaper, light + dark */
+.desktop-grid {
+  background-color: #faf7f2;
+  background-image:
+    linear-gradient(to right, rgba(99, 102, 241, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.dark .desktop-grid {
+  background-color: #08080c;
+  background-image:
+    linear-gradient(to right, rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+}
+
 /* Folio card surface — reused across project/blog cards */
 .folio-card {
   @apply rounded-2xl border border-gray-200 dark:border-ink-700 bg-white dark:bg-ink-900

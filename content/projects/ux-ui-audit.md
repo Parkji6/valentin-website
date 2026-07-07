@@ -1,5 +1,6 @@
 ---
 title: "UX / UI Audit"
+icon: "🎨"
 tagline: "Point it at a screen and get a structured, prioritized UX/UI critique."
 category: "Design"
 year: 2026

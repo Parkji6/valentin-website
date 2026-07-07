@@ -1,5 +1,6 @@
 ---
 title: "Polish Learning App"
+icon: "🇵🇱"
 tagline: "Learning Polish in context with AI-generated lessons — built after Duolingo stopped working for me."
 category: "Language learning"
 year: 2025

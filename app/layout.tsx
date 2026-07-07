@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 
@@ -17,6 +18,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const [isDark, setIsDark] = useState(true);
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  // The homepage is the valentinOS desktop — it brings its own menu bar
+  // and dock, so skip the regular site header/footer there.
+  const isDesktop = pathname === '/';
 
   useEffect(() => {
     setMounted(true);
@@ -42,6 +47,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
+        {isDesktop ? (
+          <>
+            {children}
+            <Analytics />
+          </>
+        ) : (
+        <>
         <header className="sticky top-0 z-50 border-b border-gray-200 dark:border-ink-800 bg-white/80 dark:bg-ink-950/80 backdrop-blur-md">
           <nav className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
 
@@ -169,6 +181,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </footer>
+        </>
+        )}
       </body>
     </html>
   );

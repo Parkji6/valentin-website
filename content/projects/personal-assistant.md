@@ -1,5 +1,6 @@
 ---
 title: "Personal Assistant"
+icon: "☀️"
 tagline: "One AI-generated morning briefing — email, calendar, news, and weather in a single view."
 category: "Productivity"
 year: 2026

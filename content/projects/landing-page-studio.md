@@ -1,5 +1,6 @@
 ---
 title: "Landing Page Studio"
+icon: "🚀"
 tagline: "Describe a product, get a real landing page — copy, layout, and sections generated with AI."
 category: "Marketing"
 year: 2026
